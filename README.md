@@ -1,21 +1,75 @@
-# To-Do List Application
+# MERN TODO List App
 
-This is a simple To-Do list application that allows users to add and delete tasks.
+This is a TODO List application built using the MERN stack. It allows users to manage their tasks effectively.
 
-## Features
+## Prerequisites
 
-- Add tasks by typing in the input field and clicking the "Add task" button.
-- Delete tasks by clicking the "Delete" button next to each task.
-- Input validation: Empty tasks cannot be added.
+Before running the application, ensure you have the following installed:
+- Node.js and npm (Node Package Manager)
+- MongoDB
+- MongoDB Compass (for database management)
 
-## Tech Stack
+## Setup Instructions
 
-- HTML
-- CSS
-- JavaScript
+### 1. Clone the repository
 
-## Installation
+```bash
+git clone https://github.com/AtharvaKulkarniIT/mern-todo-app.git
+```
 
-1. Clone this repository to your local machine:
-   ```bash
-   git clone <repository-url>
+### 2. Install dependencies
+
+```bash
+cd mern-todo-app
+
+# Split the terminal :
+
+# Install backend dependencies
+cd todo_backend
+npm install
+
+# Install frontend dependencies
+cd todo_frontend
+npm install
+```
+
+### 3. MongoDB Setup
+
+- Open MongoDB Compass
+- Create a new database named `Todo`
+- Inside the `Todo` database, create a collection named `tasks`
+
+### 4. Server setup for database connection
+
+```bash
+PORT=5000  # Port number for the server (you can change it if needed)
+MONGO_URI=mongodb://127.0.0.1:27017/Todo  # MongoDB connection URI
+```
+
+### 5. Running the App
+
+```bash
+# Start the server (from the 'todo_backend' directory)
+npm start
+
+# Start the client (from the 'todo_frontend' directory)
+npm start
+```
+
+The server will run on `http://localhost:5000` and the client on `http://localhost:3000`.
+
+## Usage
+
+- Open your web browser and go to `http://localhost:3000`.
+- You can add ,update tasks, mark them as completed or delete them.
+
+## Contributing
+
+Feel free to contribute to this project by submitting pull requests.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Output
+![MERN TODO List App](https://drive.google.com/uc?id=135HfGq09XYieu-1sG9pQeQ41Sx1ytZ1m)
